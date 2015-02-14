@@ -13,8 +13,6 @@ The integer field type provides a basic HTML input that restricts values to inte
 - `separator` - any valid separator character
 - `placeholder` - any string including translation keys
 
-The default separator is ",".
-
 #### Example
 
 	config => [

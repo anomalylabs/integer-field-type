@@ -8,7 +8,7 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  * @link          http://anomaly.is/streams-platform
  * @author        AnomalyLabs, Inc. <hello@anomaly.is>
  * @author        Ryan Thompson <ryan@anomaly.is>
- * @package       Anomaly\Streams\Addon\FieldType\Integer
+ * @package       Anomaly\IntegerFieldType
  */
 class IntegerFieldType extends FieldType
 {
@@ -18,7 +18,9 @@ class IntegerFieldType extends FieldType
      *
      * @var array
      */
-    protected $rules = ['integer'];
+    protected $rules = [
+        'integer'
+    ];
 
     /**
      * The database column type.
@@ -28,13 +30,22 @@ class IntegerFieldType extends FieldType
     protected $columnType = 'integer';
 
     /**
-     * Convert value to integer before setting on the model.
+     * Get the rules.
      *
-     * @param $value
-     * @return int|mixed
+     * @return array
      */
-    public function mutate($value)
+    public function getRules()
     {
-        return (int)$value;
+        $rules = parent::getRules();
+
+        if ($min = array_get($this->config, 'min')) {
+            $rules[] = 'min:' . $min;
+        }
+
+        if ($max = array_get($this->config, 'max')) {
+            $rules[] = 'max:' . $max;
+        }
+
+        return $rules;
     }
 }

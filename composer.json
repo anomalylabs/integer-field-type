@@ -1,7 +1,7 @@
 {
     "name": "anomaly/integer-field_type",
     "type": "streams-addon",
-    "description": "Integer field type.",
+    "description": "An integer input field type.",
     "authors": [
         {
             "name": "AnomalyLabs",

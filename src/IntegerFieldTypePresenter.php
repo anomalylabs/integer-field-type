@@ -16,14 +16,11 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
     /**
      * Return a formatted integer.
      *
-     * @param null $separator
      * @return string
      */
-    public function format($separator = null)
+    public function format()
     {
-        if (!$separator) {
-            $separator = array_get($this->object->getConfig(), 'separator');
-        }
+        $separator = array_get($this->object->getConfig(), 'separator');
 
         return number_format($this->object->getValue(), 0, '.', $separator);
     }

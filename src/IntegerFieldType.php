@@ -14,6 +14,13 @@ class IntegerFieldType extends FieldType
 {
 
     /**
+     * The input view.
+     *
+     * @var string
+     */
+    protected $inputView = 'anomaly.field_type.integer::input';
+
+    /**
      * Base field type rules.
      *
      * @var array
@@ -28,6 +35,16 @@ class IntegerFieldType extends FieldType
      * @var string
      */
     protected $columnType = 'integer';
+
+    /**
+     * The field type config.
+     *
+     * @var array
+     */
+    protected $config = [
+        'min'  => -100,
+        'step' => 1
+    ];
 
     /**
      * Get the rules.

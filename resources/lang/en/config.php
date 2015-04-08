@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'placeholder' => [
-        'label' => 'Placeholder'
+    'separator' => [
+        'label'        => 'Thousands Separator',
+        'instructions' => 'Enter the character(s) to use for the thousands separator. This is used for display only.'
     ],
-    'separator'   => [
-        'label' => 'Separator'
+    'min'       => [
+        'label'        => 'Minimum Value',
+        'instructions' => 'What is the minimum value allowed?'
     ],
-    'min'         => [
-        'label' => 'Minimum'
-    ],
-    'max'         => [
-        'label' => 'Maximum'
+    'max'       => [
+        'label'        => 'Maximum Value',
+        'instructions' => 'What is the maximum value allowed?'
     ]
 ];

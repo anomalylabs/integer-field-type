@@ -1,10 +1,14 @@
+{{ asset_add('styles.css', 'anomaly.field_type.integer::less/spinner.less') }}
+{{ asset_add('scripts.js', 'anomaly.field_type.integer::js/jquery-ui.spinner.min.js') }}
 {{ asset_add('scripts.js', 'anomaly.field_type.integer::js/input.js') }}
 
 <input
         type="text"
-        class="spinner form-control"
-        value="{{ field_type.value }}"
+        class="form-control"
+        name="{{ field_type.input_name }}"
         data-min="{{ field_type.config.min }}"
         data-max="{{ field_type.config.max }}"
         data-step="{{ field_type.config.step }}"
-        name="{{ field_type.input_name }}">
+        value="{{ field_type.value }}"
+        {{ field_type.disabled ? 'disabled' }}
+        {{ field_type.readonly ? 'readonly' }}>

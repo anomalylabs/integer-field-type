@@ -18,7 +18,7 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
      *
      * @return string
      */
-    public function format()
+    public function formatted()
     {
         $separator = array_get($this->object->getConfig(), 'separator');
 

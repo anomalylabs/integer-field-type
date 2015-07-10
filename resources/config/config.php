@@ -1,19 +1,32 @@
 <?php
 
 return [
-    'separator' => [
-        'type' => 'anomaly.field_type.text'
-    ],
-    'min'       => [
-        'type'   => 'anomaly.field_type.integer',
-        'config' => [
-            'min' => false
+    'separator'     => [
+        'type'     => 'anomaly.field_type.select',
+        'required' => true,
+        'config'   => [
+            'default_value' => ',',
+            'options'       => [
+                ','      => '1,000',
+                '.'      => '1.000',
+                '`'      => '1`000',
+                '&#160;' => '1 000'
+            ]
         ]
     ],
-    'max'       => [
-        'type'   => 'anomaly.field_type.integer',
-        'config' => [
-            'min' => false
+    'min'           => [
+        'type'  => 'anomaly.field_type.text',
+        'rules' => [
+            'integer'
         ]
+    ],
+    'max'           => [
+        'type' => 'anomaly.field_type.integer'
+    ],
+    'step'          => [
+        'type' => 'anomaly.field_type.integer'
+    ],
+    'default_value' => [
+        'type' => 'anomaly.field_type.integer'
     ]
 ];

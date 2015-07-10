@@ -1,16 +1,24 @@
 <?php
 
 return [
-    'separator' => [
+    'separator'     => [
         'label'        => 'Thousands Separator',
-        'instructions' => 'Enter the character(s) to use for the thousands separator. This is used for display only.'
+        'instructions' => 'Choose the thousands separator to use. This is for displaying values only.'
     ],
-    'min'       => [
+    'min'           => [
         'label'        => 'Minimum Value',
         'instructions' => 'What is the minimum value allowed?'
     ],
-    'max'       => [
+    'max'           => [
         'label'        => 'Maximum Value',
         'instructions' => 'What is the maximum value allowed?'
+    ],
+    'step'          => [
+        'label'        => 'Step',
+        'instructions' => 'What size step should the input buttons have?'
+    ],
+    'default_value' => [
+        'label'        => 'Default Value',
+        'instructions' => 'Enter the default value if any.'
     ]
 ];

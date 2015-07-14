@@ -5,10 +5,11 @@
 <input
         type="text"
         class="form-control"
+        value="{{ field_type.value }}"
         name="{{ field_type.input_name }}"
         data-min="{{ field_type.config.min }}"
         data-max="{{ field_type.config.max }}"
         data-step="{{ field_type.config.step }}"
-        value="{{ field_type.value }}"
+        placeholder="{{ trans(field_type.placeholder) }}"
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}>

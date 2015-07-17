@@ -15,9 +15,9 @@ return [
         ]
     ],
     'min'           => [
-        'type'  => 'anomaly.field_type.text',
-        'rules' => [
-            'integer'
+        'type'   => 'anomaly.field_type.integer',
+        'config' => [
+            'min' => null
         ]
     ],
     'max'           => [

@@ -1,6 +1,7 @@
 <?php
 
 return [
-    'name'        => 'Integer',
+    'title'       => 'Integer',
+    'name'        => 'Integer Field Type',
     'description' => 'An integer input field type.'
 ];

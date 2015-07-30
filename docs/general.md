@@ -65,4 +65,4 @@ Returns the value formatted per field configuration.
     {{ entry.example.formatted }}
     
     // API usage
-    $entry->example->formatted();
+    $entry->example->formatted;

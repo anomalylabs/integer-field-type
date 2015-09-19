@@ -39,7 +39,7 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
             $currency = $this->object->getEntry()->{$field};
         }
 
-        $format = new NumberFormatter(app('app.locale') . "@currency={$currency}", NumberFormatter::CURRENCY);
+        $format = new NumberFormatter(config('app.locale') . "@currency={$currency}", NumberFormatter::CURRENCY);
 
         $symbol = $format->getSymbol(NumberFormatter::CURRENCY_SYMBOL);
 

@@ -88,6 +88,6 @@ class IntegerFieldType extends FieldType
             return 'anomaly.field_type.integer::admin/input';
         }
 
-        return 'streams::form/partials/input';
+        return 'anomaly.field_type.integer::input';
     }
 }

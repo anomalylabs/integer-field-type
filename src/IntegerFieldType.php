@@ -1,6 +1,7 @@
 <?php namespace Anomaly\IntegerFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
+use Illuminate\Http\Request;
 
 /**
  * Class IntegerFieldType
@@ -12,13 +13,6 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
  */
 class IntegerFieldType extends FieldType
 {
-
-    /**
-     * The input view.
-     *
-     * @var string
-     */
-    protected $inputView = 'anomaly.field_type.integer::input';
 
     /**
      * Base field type rules.
@@ -47,6 +41,23 @@ class IntegerFieldType extends FieldType
     ];
 
     /**
+     * The request object.
+     *
+     * @var Request
+     */
+    protected $request;
+
+    /**
+     * Create a new IntegerFieldType instance.
+     *
+     * @param Request $request
+     */
+    public function __construct(Request $request)
+    {
+        $this->request = $request;
+    }
+
+    /**
      * Get the rules.
      *
      * @return array
@@ -64,5 +75,19 @@ class IntegerFieldType extends FieldType
         }
 
         return $rules;
+    }
+
+    /**
+     * Get the input view.
+     *
+     * @return string
+     */
+    public function getInputView()
+    {
+        if ($this->request->segment(1) == 'admin') {
+            return 'anomaly.field_type.integer::admin/input';
+        }
+
+        return 'streams::form/partials/input';
     }
 }

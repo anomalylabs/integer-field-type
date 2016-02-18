@@ -24,18 +24,18 @@
     // Focus State
     &.focus {
         .ui-spinner-input {
-            color: @secondary;
-            border-color: @secondary;
+            color: @brand-primary;
+            border-color: @brand-primary;
         }
         .ui-spinner-button {
-            background-color: @secondary;
+            background-color: @brand-primary;
 
             &:hover {
-                background-color: mix(@secondary, black, 85%);
+                background-color: mix(@brand-primary, black, 85%);
             }
         }
         .ui-spinner-up {
-            border-bottom-color: mix(@secondary, black, 85%);
+            border-bottom-color: mix(@brand-primary, black, 85%);
         }
     }
 }
@@ -106,13 +106,13 @@
     width: 37px;
     cursor: pointer;
     color: #ffffff;
-    text-decoration: none !important;
+    text-decoration: none;
     background-color: #bdc3c7;
     outline: none;
 
     &:hover {
         background-color: mix(#bdc3c7, white, 70%);
-        color: mix(@secondary, white, 10%);
+        color: mix(@brand-primary, white, 10%);
     }
 
     // Icon
@@ -143,5 +143,30 @@
 
     .ui-icon:before {
         content: "\f0d7";
+        font-family: "FontAwesome";
+    }
+}
+
+.has-danger {
+    .ui-spinner-button {
+        background: @brand-danger;
+    }
+}
+
+.has-success {
+    .ui-spinner-button {
+        background: @brand-success;
+    }
+}
+
+.has-info {
+    .ui-spinner-button {
+        background: @brand-info;
+    }
+}
+
+.has-warning {
+    .ui-spinner-button {
+        background: @brand-warning;
     }
 }

@@ -11,6 +11,7 @@
         data-max="{{ field_type.config.max }}"
         data-step="{{ field_type.config.step }}"
         placeholder="{{ trans(field_type.placeholder) }}"
+        {{ html_attributes(field_type.attributes) }}
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}
         {{ field_type.required ? 'required' }}>

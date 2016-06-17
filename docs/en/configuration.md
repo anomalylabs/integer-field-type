@@ -1,20 +1,4 @@
-# Integer Field Type
-
-- [Introduction](#introduction)
-- [Configuration](#configuration)
-- [Output](#output)
-
-
-<a name="introduction"></a>
-## Introduction
-
-`anomaly.field_type.integer`
-
-The integer field type provides a basic HTML input that restricts input to integer values between an optional range.
-
-
-<a name="configuration"></a>
-## Configuration
+# Configuration
 
 **Example Definition:**
 
@@ -50,19 +34,3 @@ The size of the step to take when spinning via the buttons or arrow keys. The de
 ### `default_value`
 
 The default value. By default value is `null`.
-
-
-<a name="output"></a>
-## Output
-
-This field type returns the integer value as formatted in the database by default.
-
-### `formatted()`
-
-Returns the value formatted per field configuration.
-
-    // Twig usage
-    {{ entry.example.formatted }}
-    
-    // API usage
-    $entry->example->formatted;

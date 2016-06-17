@@ -1,0 +1,5 @@
+# Introduction
+
+`anomaly.field_type.integer`
+
+The integer field type provides a basic HTML input that restricts input to integer values between an optional range.

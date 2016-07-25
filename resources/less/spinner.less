@@ -51,16 +51,16 @@
     font-size: 15px;
     line-height: 1.467;
     &::-moz-placeholder {
-        color: desaturate(lighten(#2c2c2c, 22%), 16%); // Firefox
+        color: @input-color-placeholder;
         opacity: 1;
     }
     // See https://github.com/twbs/bootstrap/pull/11526
     &:-ms-input-placeholder {
-        color: #2c2c2c;
+        color: @input-color-placeholder;
     }
     // Internet Explorer 10+
     &::-webkit-input-placeholder {
-        color: #2c2c2c;
+        color: @input-color-placeholder;
     }
     // Safari and Chrome
 

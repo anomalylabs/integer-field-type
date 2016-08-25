@@ -9,7 +9,6 @@ use Illuminate\Http\Request;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\IntegerFieldType
  */
 class IntegerFieldType extends FieldType
 {
@@ -20,7 +19,7 @@ class IntegerFieldType extends FieldType
      * @var array
      */
     protected $rules = [
-        'integer'
+        'integer',
     ];
 
     /**
@@ -37,7 +36,7 @@ class IntegerFieldType extends FieldType
      */
     protected $config = [
         'min'  => 0,
-        'step' => 1
+        'step' => 1,
     ];
 
     /**

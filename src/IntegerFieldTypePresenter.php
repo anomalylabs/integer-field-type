@@ -9,7 +9,6 @@ use NumberFormatter;
  * @link          http://pyrocms.com/
  * @author        PyroCMS, Inc. <support@pyrocms.com>
  * @author        Ryan Thompson <ryan@pyrocms.com>
- * @package       Anomaly\IntegerFieldType
  */
 class IntegerFieldTypePresenter extends FieldTypePresenter
 {
@@ -29,8 +28,8 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
     /**
      * Return the integer formatted as a currency.
      *
-     * @param null   $currency
-     * @param string $field
+     * @param  null   $currency
+     * @param  string $field
      * @return string
      */
     public function currency($currency = null, $field = 'currency')

@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'title' => 'Szám',
-    'name' => 'Szám mező típus',
+    'title'       => 'Szám',
+    'name'        => 'Szám mező típus',
     'description' => 'Szám bekérő mező típus.',
 ];

@@ -10,23 +10,23 @@ return [
                 ','      => '1,000',
                 '.'      => '1.000',
                 '`'      => '1`000',
-                '&#160;' => '1 000'
-            ]
-        ]
+                '&#160;' => '1 000',
+            ],
+        ],
     ],
     'min'           => [
         'type'   => 'anomaly.field_type.integer',
         'config' => [
-            'min' => null
-        ]
+            'min' => null,
+        ],
     ],
     'max'           => [
-        'type' => 'anomaly.field_type.integer'
+        'type' => 'anomaly.field_type.integer',
     ],
     'step'          => [
-        'type' => 'anomaly.field_type.integer'
+        'type' => 'anomaly.field_type.integer',
     ],
     'default_value' => [
-        'type' => 'anomaly.field_type.integer'
-    ]
+        'type' => 'anomaly.field_type.integer',
+    ],
 ];

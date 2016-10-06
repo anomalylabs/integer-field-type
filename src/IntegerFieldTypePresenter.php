@@ -18,11 +18,13 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
      *
      * @return string
      */
-    public function formatted()
+    public function format()
     {
-        $separator = array_get($this->object->getConfig(), 'separator');
+        $separator = $this->object->config('separator');
+        $decimals  = $this->object->config('decimals');
+        $point     = $this->object->config('point');
 
-        return number_format($this->object->getValue(), 0, '.', $separator);
+        return number_format($this->object->getValue(), $decimals, $point, str_replace('&#160;', ' ', $separator));
     }
 
     /**
@@ -38,10 +40,12 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
             $currency = $this->object->getEntry()->{$field};
         }
 
-        $format = new NumberFormatter(config('app.locale') . "@currency={$currency}", NumberFormatter::CURRENCY);
+        if (!$currency) {
+            $currency = config('streams::currencies.default');
+        }
 
-        $symbol = $format->getSymbol(NumberFormatter::CURRENCY_SYMBOL);
+        $symbol = config('streams::currencies.supported.' . strtoupper($currency) . '.symbol');
 
-        return $symbol . $this->formatted();
+        return $symbol . $this->format();
     }
 }

@@ -14,6 +14,13 @@ class IntegerFieldType extends FieldType
 {
 
     /**
+     * The input view.
+     *
+     * @var null
+     */
+    protected $inputView = 'anomaly.field_type.integer::input';
+
+    /**
      * Base field type rules.
      *
      * @var array
@@ -74,19 +81,5 @@ class IntegerFieldType extends FieldType
         }
 
         return $rules;
-    }
-
-    /**
-     * Get the input view.
-     *
-     * @return string
-     */
-    public function getInputView()
-    {
-        if ($this->request->segment(1) == 'admin') {
-            return 'anomaly.field_type.integer::admin/input';
-        }
-
-        return 'anomaly.field_type.integer::input';
     }
 }

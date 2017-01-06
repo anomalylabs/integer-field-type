@@ -1,7 +1,6 @@
 <?php namespace Anomaly\IntegerFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
-use NumberFormatter;
 
 /**
  * Class IntegerFieldTypePresenter
@@ -21,10 +20,8 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
     public function format()
     {
         $separator = $this->object->config('separator');
-        $decimals  = $this->object->config('decimals');
-        $point     = $this->object->config('point');
 
-        return number_format($this->object->getValue(), $decimals, $point, str_replace('&#160;', ' ', $separator));
+        return number_format($this->object->getValue(), 0, null, str_replace('&#160;', ' ', $separator));
     }
 
     /**

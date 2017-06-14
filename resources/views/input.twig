@@ -8,4 +8,5 @@
         step="{{ field_type.config.step }}"
         placeholder="{{ trans(field_type.placeholder) }}"
         {{ field_type.disabled ? 'disabled' }}
-        {{ field_type.readonly ? 'readonly' }}>
+        {{ field_type.readonly ? 'readonly' }}
+        onhover="(function (e) {e.preventDefault();})(event);">

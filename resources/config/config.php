@@ -2,11 +2,11 @@
 
 return [
     'separator'     => [
-        'type'     => 'anomaly.field_type.select',
-        'required' => true,
-        'config'   => [
+        'type'   => 'anomaly.field_type.select',
+        'config' => [
             'default_value' => ',',
             'options'       => [
+                ''       => '1000',
                 ','      => '1,000',
                 '.'      => '1.000',
                 '`'      => '1`000',

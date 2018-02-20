@@ -42,8 +42,9 @@ class IntegerFieldType extends FieldType
      * @var array
      */
     protected $config = [
-        'min'  => 0,
-        'step' => 1,
+        'min'       => 0,
+        'step'      => 1,
+        'separator' => ',',
     ];
 
     /**

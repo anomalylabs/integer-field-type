@@ -4,7 +4,7 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeModifier;
 
 /**
  * Class IntegerFieldTypeModifier
- *  
+ *
  * @link   http://pyrocms.com/
  * @author PyroCMS, Inc. <support@pyrocms.com>
  * @author Ryan Thompson <ryan@pyrocms.com>

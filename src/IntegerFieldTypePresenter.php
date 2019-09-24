@@ -13,21 +13,9 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
 {
 
     /**
-     * Return a formatted integer.
-     *
-     * @return string
-     */
-    public function format()
-    {
-        $separator = $this->object->config('separator');
-
-        return number_format($this->object->getValue(), 0, null, str_replace('&#160;', ' ', $separator));
-    }
-
-    /**
      * Return the integer formatted as a currency.
      *
-     * @param  null   $currency
+     * @param  null $currency
      * @param  string $field
      * @return string
      */
@@ -44,5 +32,17 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
         $symbol = config('streams::currencies.supported.' . strtoupper($currency) . '.symbol');
 
         return $symbol . $this->format();
+    }
+
+    /**
+     * Return a formatted integer.
+     *
+     * @return string
+     */
+    public function format()
+    {
+        $separator = $this->object->config('separator');
+
+        return number_format($this->object->getValue(), 0, null, str_replace('&#160;', ' ', $separator));
     }
 }

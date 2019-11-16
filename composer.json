@@ -9,20 +9,25 @@
     ],
     "homepage": "http://pyrocms.com/",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "PyroCMS, Inc.",
-            "email": "support@pyrocms.com",
-            "homepage": "http://pyrocms.com/",
-            "role": "Owner"
-        }
-    ],
+    "authors": [{
+        "name": "PyroCMS, Inc.",
+        "email": "support@pyrocms.com",
+        "homepage": "http://pyrocms.com/",
+        "role": "Owner"
+    }],
     "support": {
         "email": "support@anomaly.is"
     },
     "autoload": {
         "psr-4": {
             "Anomaly\\IntegerFieldType\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Anomaly\\IntegerFieldType\\IntegerFieldTypeServiceProvider"
+            ]
         }
     }
 }

@@ -1,4 +1,6 @@
-<?php namespace Anomaly\IntegerFieldType;
+<?php
+
+namespace Anomaly\IntegerFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 use Illuminate\Http\Request;
@@ -82,5 +84,19 @@ class IntegerFieldType extends FieldType
         }
 
         return $rules;
+    }
+
+    /**
+     * Get the attributes.
+     * 
+     * @return array
+     */
+    public function getAttributes()
+    {
+        return array_merge(parent::getAttributes(), [
+            'min'     => $this->config('min'),
+            'max'     => $this->config('max'),
+            'step'    => $this->config('step'),
+        ]);
     }
 }

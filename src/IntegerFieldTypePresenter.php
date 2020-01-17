@@ -27,8 +27,8 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
     /**
      * Return the integer formatted as a currency.
      *
-     * @param  null   $currency
-     * @param  string $field
+     * @param null $currency
+     * @param string $field
      * @return string
      */
     public function currency($currency = null, $field = 'currency')
@@ -41,8 +41,18 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
             $currency = config('streams::currencies.default');
         }
 
+        $direction = config('streams::currencies.supported.' . strtoupper($currency) . '.direction');
         $symbol = config('streams::currencies.supported.' . strtoupper($currency) . '.symbol');
 
-        return $symbol . $this->format();
+        $prefix = null;
+        $suffix = null;
+
+        if (strtolower($direction) == 'ltr') {
+            $prefix = $symbol;
+        } else {
+            $suffix = $symbol;
+        }
+
+        return $prefix . " " . $this->format() . " " . $suffix;
     }
 }

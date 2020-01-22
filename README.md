@@ -1,6 +1,6 @@
 # Integer Field Type
 
-*anomaly.field_type.integer*
+*visiosoft.field_type.integer*
 
 #### An integer input field type.
 

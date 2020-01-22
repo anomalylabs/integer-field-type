@@ -1,4 +1,4 @@
-<?php namespace Anomaly\IntegerFieldType;
+<?php namespace Visiosoft\IntegerFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldType;
 use Illuminate\Http\Request;
@@ -18,7 +18,7 @@ class IntegerFieldType extends FieldType
      *
      * @var null
      */
-    protected $inputView = 'anomaly.field_type.integer::input';
+    protected $inputView = 'visiosoft.field_type.integer::input';
 
     /**
      * Base field type rules.

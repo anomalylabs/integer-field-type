@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/integer-field_type",
+    "name": "visiosoft/integer-field_type",
     "type": "streams-addon",
     "description": "An integer input field type.",
     "keywords": [
@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Anomaly\\IntegerFieldType\\": "src/"
+            "Visiosoft\\IntegerFieldType\\": "src/"
         }
     }
 }

@@ -1,4 +1,4 @@
-<?php namespace Anomaly\IntegerFieldType;
+<?php namespace Visiosoft\IntegerFieldType;
 
 use Anomaly\Streams\Platform\Addon\FieldType\FieldTypeModifier;
 

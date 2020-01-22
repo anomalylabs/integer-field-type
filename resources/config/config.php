@@ -15,18 +15,18 @@ return [
         ],
     ],
     'min'           => [
-        'type'   => 'anomaly.field_type.integer',
+        'type'   => 'visiosoft.field_type.integer',
         'config' => [
             'min' => null,
         ],
     ],
     'max'           => [
-        'type' => 'anomaly.field_type.integer',
+        'type' => 'visiosoft.field_type.integer',
     ],
     'step'          => [
-        'type' => 'anomaly.field_type.integer',
+        'type' => 'visiosoft.field_type.integer',
     ],
     'default_value' => [
-        'type' => 'anomaly.field_type.integer',
+        'type' => 'visiosoft.field_type.integer',
     ],
 ];

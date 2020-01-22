@@ -31,7 +31,7 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
      * @param string $field
      * @return string
      */
-    public function currency($currency = null, $field = 'currency')
+    public function currency($currency = null, $field = 'currency', $showSeparator = true)
     {
         if (!$currency) {
             $currency = $this->object->getEntry()->{$field};
@@ -52,7 +52,10 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
         } else {
             $suffix = $symbol;
         }
+        if ($showSeparator) {
+            return $prefix . " " . $this->format() . " " . $suffix;
+        }
+        return $prefix . " " . $this->object->getValue() . " " . $suffix;
 
-        return $prefix . " " . $this->format() . " " . $suffix;
     }
 }

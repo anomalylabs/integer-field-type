@@ -5,9 +5,9 @@ use Anomaly\Streams\Platform\Addon\FieldType\FieldTypePresenter;
 /**
  * Class IntegerFieldTypePresenter
  *
- * @link          http://pyrocms.com/
- * @author        PyroCMS, Inc. <support@pyrocms.com>
- * @author        Ryan Thompson <ryan@pyrocms.com>
+ * @link          https://visiosoft.com.tr/
+ * @author        Visiosoft, LTD. <support@visiosoft.com.tr>
+ * @author        Vedat Akdoğan <vedat@visiosoft.com.tr>
  */
 class IntegerFieldTypePresenter extends FieldTypePresenter
 {
@@ -31,7 +31,7 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
      * @param string $field
      * @return string
      */
-    public function currency($currency = null, $field = 'currency', $showSeparator = true)
+    public function currency($currency = null, $field = 'currency')
     {
         if (!$currency) {
             $currency = $this->object->getEntry()->{$field};
@@ -52,10 +52,6 @@ class IntegerFieldTypePresenter extends FieldTypePresenter
         } else {
             $suffix = $symbol;
         }
-        if ($showSeparator) {
-            return $prefix . " " . $this->format() . " " . $suffix;
-        }
-        return $prefix . " " . $this->object->getValue() . " " . $suffix;
-
+        return $prefix . " " . $this->format() . " " . $suffix;
     }
 }

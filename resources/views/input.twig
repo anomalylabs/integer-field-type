@@ -8,5 +8,6 @@
         placeholder="{{ trans(field_type.placeholder) }}"
         {{ field_type.disabled ? 'disabled' }}
         {{ field_type.readonly ? 'readonly' }}
+        {{ field_type.required ? 'required' }}
         {{ html_attributes(field_type.attributes) }}
         onhover="(function (e) {e.preventDefault();})(event);">
